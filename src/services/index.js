@@ -1,0 +1,33 @@
+const contact = require('./contact/contact.service.js');
+const users = require('./users/users.service.js');
+const company = require('./company/company.service.js');
+const companyusers = require('./companyusers/companyusers.service.js');
+const properties = require('./properties/properties.service.js');
+const owners = require('./owners/owners.service.js');
+const images = require('./images/images.service.js');
+const countries = require('./countries/countries.service.js');
+const cities = require('./cities/cities.service.js');
+const area = require('./area/area.service.js');
+const zones = require('./zones/zones.service.js');
+const typeofproperty = require('./typeofproperty/typeofproperty.service.js');
+const actions = require('./actions/actions.service.js');
+const test = require('./test/test.service.js');
+const addpropertydata = require('./addpropertydata/addpropertydata.service.js');
+module.exports = function () {
+  const app = this; // eslint-disable-line no-unused-vars
+  app.configure(contact);
+  app.configure(users);
+  app.configure(company);
+  app.configure(companyusers);
+  app.configure(properties);
+  app.configure(owners);
+  app.configure(images);
+  app.configure(countries);
+  app.configure(cities);
+  app.configure(area);
+  app.configure(zones);
+  app.configure(typeofproperty);
+  app.configure(actions);
+  app.configure(test);
+  app.configure(addpropertydata);
+};

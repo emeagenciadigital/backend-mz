@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Bienvendio a mi backend</title>
+
+  </head>
+  <body>
+  <div id="root" onclick="change()">a</div>
+  <div id="demo" onclick="change()">demo</div>
+  hello arriba de mi esta el div root vacio
+
+  <script>
+var propiedadeslist = [];
+fetch('http://localhost:3030/properties')
+    .then((response) => {
+        return response.json();
+    })
+    .then((propiedades) => {
+      var propiedades = propiedades.data;
+      propiedadeslist.push(propiedades)
+      console.log(propiedades[0]._id);
+    });
+
+
+   console.log(propiedadeslist);
+
+
+  </script>
+  </body>
+</html>
