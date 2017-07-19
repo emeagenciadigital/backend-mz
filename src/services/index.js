@@ -13,6 +13,7 @@ const typeofproperty = require('./typeofproperty/typeofproperty.service.js');
 const actions = require('./actions/actions.service.js');
 const test = require('./test/test.service.js');
 const addpropertydata = require('./addpropertydata/addpropertydata.service.js');
+const testnedb = require('./testnedb/testnedb.service.js');
 module.exports = function () {
   const app = this; // eslint-disable-line no-unused-vars
   app.configure(contact);
@@ -30,4 +31,5 @@ module.exports = function () {
   app.configure(actions);
   app.configure(test);
   app.configure(addpropertydata);
+  app.configure(testnedb);
 };
