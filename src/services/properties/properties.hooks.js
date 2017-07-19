@@ -19,7 +19,7 @@ module.exports = {
   after: {
     all: [],
     find: [],
-    get: [],
+    get: [propertiesFull()],
     create: [],
     update: [],
     patch: [],
